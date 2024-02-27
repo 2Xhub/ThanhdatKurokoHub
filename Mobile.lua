@@ -2484,7 +2484,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruit", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = false, ConfigFolder = "Min Gaming Hub"})
+local Window = OrionLib:MakeWindow({Name = "Kuroko HUB By LeThanhDat", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = true, ConfigFolder = "ThanhDat Gaming Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Notification",
@@ -3322,7 +3322,7 @@ M:AddToggle({
 
     M:AddToggle({
         Name = "Skill Z",
-        Default = false,
+        Default = true,
         Flag = "Skill Z",
         Save = true,
         Callback = function(Value)
@@ -3384,7 +3384,7 @@ PosY = 20
 M:AddSlider({
     Name = "Distance",
     Min = 0,
-    Max = 25,
+    Max = 60,
     Default = PosY,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
