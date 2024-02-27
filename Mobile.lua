@@ -2575,7 +2575,7 @@ local Section = W:AddSection({
     Name = "Status"
 })
 
-local localDicord = W:AddLabel("Dicord Kuroko Hub : Soon...")
+local localDicord = W:AddLabel("Dicord Kuroko Hub : https://discord.com/invite/x6MfX67F")
 
 local locallv = W:AddLabel("Level")
     
