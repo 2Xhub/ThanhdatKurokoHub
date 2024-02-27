@@ -3986,6 +3986,47 @@ spawn(function()
 end)
 
 ST:AddToggle({
+    Name = "Aotu Turn On V3",
+    Default = false,
+    Flag = "Tự động Turn On Race v3",
+    Save = true,
+    Callback = function(Value)
+        _G.V3 = Value
+    end    
+})
+spawn(function()
+    while wait() do
+        pcall(function()
+            if _G.V3 then
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,"T",false,game)
+                wait(0.1)
+                game:GetService("VirtualInputManager"):SendKeyEvent(false,"T",false,game)
+            end
+        end)
+    end
+end)
+ST:AddToggle({
+    Name = "Aotu Turn On V4",
+    Default = true,
+    Flag = "Tự động Turn On Race v4",
+    Save = true,
+    Callback = function(Value)
+        _G.V4 = Value
+    end    
+})
+spawn(function()
+    while wait() do
+        pcall(function()
+            if _G.V4 then
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,"Y",false,game)
+                wait(0.1)
+                game:GetService("VirtualInputManager"):SendKeyEvent(false,"Y",false,game)
+            end
+        end)
+    end
+end)
+
+ST:AddToggle({
         Name = "Aotu Buso",
         Default = true,
         Callback = function(Value)
@@ -6007,47 +6048,6 @@ AutoPullLever = R:AddToggle({
 		StopTween("AutoPullLever")
     end    
 })
-
-R:AddToggle({
-    Name = "Aotu Turn On V3",
-    Default = false,
-    Flag = "Tự động Turn On Race v3",
-    Save = true,
-    Callback = function(Value)
-        _G.V3 = Value
-    end    
-})
-spawn(function()
-    while wait() do
-        pcall(function()
-            if _G.V3 then
-                game:GetService("VirtualInputManager"):SendKeyEvent(true,"T",false,game)
-                wait(0.1)
-                game:GetService("VirtualInputManager"):SendKeyEvent(false,"T",false,game)
-            end
-        end)
-    end
-end)
-R:AddToggle({
-    Name = "Aotu Turn On V4",
-    Default = true,
-    Flag = "Tự động Turn On Race v4",
-    Save = true,
-    Callback = function(Value)
-        _G.V4 = Value
-    end    
-})
-spawn(function()
-    while wait() do
-        pcall(function()
-            if _G.V4 then
-                game:GetService("VirtualInputManager"):SendKeyEvent(true,"Y",false,game)
-                wait(0.1)
-                game:GetService("VirtualInputManager"):SendKeyEvent(false,"Y",false,game)
-            end
-        end)
-    end
-end)
 
 MoveCamTooMoonToggle = R:AddToggle({
     Name = "Lock Moon",
