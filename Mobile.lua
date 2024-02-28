@@ -2572,168 +2572,20 @@ local C = Window:MakeTab({
 
 -----Label--------------------
 local Section = W:AddSection({
-    Name = "Status"
+    Name = "Notification"
 })
 
 local localDicord = W:AddLabel("Dicord Kuroko Hub : https://discord.com/invite/x6MfX67F")
 
-local localNotificationUpdate = W:AddLabel("Remove Farm Chest Fast")
+local localUpdate = W:AddLabel("Update : Remove Farm Chest Fast")
 
-local locallv = W:AddLabel("Level")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                locallv:Set("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
-            end)
-        end
-    end)
-    
-    local localrace = W:AddLabel("Race")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localrace:Set("Race :".." "..game:GetService("Players").LocalPlayer.Data.Race.Value)
-            end)
-        end
-    end)
-    
-    local localbeli = W:AddLabel("Beli")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localbeli:Set("Beli :".." "..game:GetService("Players").LocalPlayer.Data.Beli.Value)
-            end)
-        end
-    end)
-    
-    local localfrag = W:AddLabel("Fragment")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localfrag:Set("Fragments :".." "..game:GetService("Players").LocalPlayer.Data.Fragments.Value)
-            end)
-        end
-    end)
-    
-    
-    local localexp = W:AddLabel("ExP")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localexp:Set("ExP Points :".." "..game:GetService("Players").LocalPlayer.Data.Exp.Value)
-            end)
-        end
-    end)
-    
-    local localstat = W:AddLabel("Stats Points")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localstat:Set("Stats Points :".." "..game:GetService("Players").LocalPlayer.Data.Points.Value)
-            end)
-        end
-    end)
-    
-    local localbountyhornor = W:AddLabel("Bounty")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                localbountyhornor:Set("Bounty / Honor :".." "..game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value)
-            end)
-        end
-    end)
-    
-    local localDevil = W:AddLabel("Devil Fruit")
-    
-    spawn(function()
-        while wait() do
-            pcall(function()
-                if game:GetService("Players").LocalPlayer.Character:FindFirstChild(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value) or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(game:GetService("Players").LocalPlayer.Data.DevilFruit.Value) then
-                    localDevil:Set("Devil Fruit :".." "..game:GetService("Players").LocalPlayer.Data.DevilFruit.Value)
-                else
-                    localDevil:Set("Not Have Devil Fruit")
-                end
-            end)
-        end
-    end)        
-    
-    local Section = W:AddSection({
-        Name = "Status Hack"
-    })
-    
-    local Farmfast = W:AddLabel("Farm Fast ✅")
-    local Bypass = W:AddLabel("Bypass ✅")
-    local Section = W:AddSection({
-        Name = "World"
-    })
-    local WolrdSet3 = W:AddLabel("World 1 ✅ ")
-    local WolrdSet = W:AddLabel("Wolrd : 2 ✅")
-    local WolrdSet1 = W:AddLabel("Wolrd : 3 ✅")
-    local Section = W:AddSection({
-        Name = "Stats Point"
-    })
-    local StastMelee = W:AddLabel("")
-    local StastDefense = W:AddLabel("")
-    local StastSword = W:AddLabel("")
-    local StastGun = W:AddLabel("")
-    local StastDevilFruit = W:AddLabel("")
-    local PointsStast = W:AddLabel("")
-    local Section = W:AddSection({
-        Name = "Melee Check"
-    })
-    local  Superhuman =             W:AddLabel("❌ : Superhuman")
-    local  DeathStep =              W:AddLabel("❌ : Sharkman Karate")
-    local  ElectricClaw =             W:AddLabel("❌ : Electric Claw")
-    local  DragonTalon =             W:AddLabel("❌ : Dragon Talon")
-    local   GodHuman =            W:AddLabel("❌ : God Human")
-    local Section = W:AddSection({
-        Name = "Sword Legend Check"
-    })
-    local   Shisui =            W:AddLabel("❌ : Shisui")
-    local     Saddi =           W:AddLabel("❌ : Saddi")
-    local      Wando =         W:AddLabel("❌ : Wando")
-    local     TrueTripleKatana          W:AddLabel("❌ : True Triple Katana")
-    local Section = W:AddSection({
-        Name = "World 1 Weapon"
-    })
-    local   Saber  = W:AddLabel("❌ : Saber")
-    local Section = W:AddSection({
-        Name = "World 2 Weapon"
-    })
-    local       Rengoku =         W:AddLabel("❌ : Rengoku")
-    local    MidnightBlade =            W:AddLabel("❌ : Midnight Blade")
-    local       DragonTrident =        W:AddLabel("❌ : DragonTrident")
-    local Section = W:AddSection({
-        Name = "World 3 Weapon"
-    })
-    local     Yama =          W:AddLabel("❌ : Yama")
-    local        BuddySword =        W:AddLabel("❌ : Buddy Sword")
-    local       Canvander =        W:AddLabel("❌ : Canvander")
-    local      TwinHooks =         W:AddLabel("❌ : Twin Hooks")
-    local     SpikeyTrident =          W:AddLabel("❌ : Spikey Trident")
-    local   HallowScythe =            W:AddLabel("❌ : Hallow Scythe")
-    local     DarkDagger =           W:AddLabel("❌ : Dark Dagger")
-    local     Tushita          W:AddLabel("❌ : Tushita")
-    local Section = W:AddSection({
-        Name = "Gun"
-    })
-    local   Kabucha =            W:AddLabel("❌ : Kabucha")
-    local   AcidumRifle =             W:AddLabel("❌ : Acidum Rifle")
-    local    BizarreRifle =            W:AddLabel("❌ : Bizarre Rifle")
-    local Section = W:AddSection({
-        Name = "Quest"
-    })
-    local   BartiloQuest =            W:AddLabel("❌ : Bartilo Quest")
-    local   DonSwanQuest =             W:AddLabel("❌ : Don Swan Quest")
-    local    KillDonSwan =           W:AddLabel("❌ : Kill Don Swan")
+local localUpdate = W:AddLabel("Update : Fast Attack and Bringmob")
 
+local localUpdate = W:AddLabel("Người Viết : Lê Thành Đạt and CHILY HUB X")
+
+local localUpdate = W:AddLabel("Đang Phát Triển")
+
+local localUpdate = W:AddLabel("Việt Nam")
 
 local Section = W:AddSection({
     Name = "Acessory"
