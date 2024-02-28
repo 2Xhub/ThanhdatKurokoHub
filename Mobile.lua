@@ -2484,7 +2484,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kuroko HUB By LeThanhDat", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = true, ConfigFolder = "ThanhDat Gaming Hub"})
+local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = false, ConfigFolder = "ThanhDat Gaming Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Notification",
@@ -2582,10 +2582,6 @@ local localUpdate = W:AddLabel("Remove :  Farm Chest Fast")
 local localUpdate = W:AddLabl("Add : Aotu Turn On V4 and V3)"
 
 local localUpdate = W:AddLabel("Update : Fast Attack and Bringmob")
-
-local localUpdate = W:AddLabel("Người Viết : Lê Thành Đạt and CHILY HUB X")
-
-local localUpdate = W:AddLabel("Ngày Ra Mắt Script")
 
 local localUpdate = W:AddLabel("Đang Phát Triển")
 
