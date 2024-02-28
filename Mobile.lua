@@ -2577,6 +2577,8 @@ local Section = W:AddSection({
 
 local localDicord = W:AddLabel("Dicord Kuroko Hub : https://discord.com/invite/x6MfX67F")
 
+local localNotificationUpdate = W:AddLabel("Remove Farm Chest Fast")
+
 local locallv = W:AddLabel("Level")
     
     spawn(function()
@@ -3522,23 +3524,13 @@ M:AddToggle({
     })
 
 TweenChest = M:AddToggle({
-        Name = "Farm Chest",
+        Name = "Farm Chest Tween",
         Default = false,
         Flag = "Tự động Chest",
         Save = true,
         Callback = function(Value)
             AutoFarmChest = Value
             StopTween(AutoFarmChest)
-        end    
-    })
-
-    M:AddToggle({
-        Name = "Farm Chest Fast",
-        Default = false,
-        Flag = "Tự động Chest[Bypass]",
-        Save = true,
-        Callback = function(Value)
-            _G.ChestBypass = Value
         end    
     })
 
@@ -3943,7 +3935,7 @@ spawn(function()
     end)
 end)
 
-    _G.FastAttackDelay = 0.75
+    _G.FastAttackDelay = 0.25
            
 
 
