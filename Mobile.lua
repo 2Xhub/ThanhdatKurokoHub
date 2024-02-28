@@ -2577,12 +2577,6 @@ local Section = W:AddSection({
 
 local localDicord = W:AddLabel("Dicord Kuroko Hub : https://discord.com/invite/x6MfX67F")
 
-local localUpdate = W:AddLabel("Remove :  Farm Chest Fast")
-
-local localUpdate = W:AddLabel("Add : Aotu Turn On V4 and V3)"
-
-local localUpdate = W:AddLabel("Update : Fast Attack and Bringmob")
-
 local localUpdate = W:AddLabel("Người Làm : Thành Đạt and Ny Tôii")
 
 local localUpdate = W:AddLabel("Ngày Ra Mắt : 27/02")
