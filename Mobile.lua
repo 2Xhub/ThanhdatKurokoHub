@@ -2484,7 +2484,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = false, ConfigFolder = "ThanhDat Gaming Hub"})
+local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = true, ConfigFolder = "ThanhDat Gaming Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Notification",
@@ -2578,8 +2578,6 @@ local Section = W:AddSection({
 local localDicord = W:AddLabel("Dicord Kuroko Hub : https://discord.com/invite/x6MfX67F")
 
 local localUpdate = W:AddLabel("Người Làm : Thành Đạt and Ny Tôii")
-
-local localUpdate = W:AddLabel("Ngày Ra Mắt : 27/02")
 
 local localUpdate = W:AddLabel("Đang Phát Triển")
 
